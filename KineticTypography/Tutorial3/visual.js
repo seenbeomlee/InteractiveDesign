@@ -7,7 +7,7 @@ export class Visual {
   constructor() {
     this.text = new Text();
 
-    this.textArr = RANDOM_TEXT.split('');
+    this.textArr = 'sblee';
 
     this.particles = [];
 
@@ -21,7 +21,7 @@ export class Visual {
   }
 
   show(stageWidth, stageHeight) {
-    const str = this.textArr[Math.round(Math.random() * (this.textArr.length - 1))];
+    const str = this.textArr;
     this.pos = this.text.setText(str, 26, stageWidth, stageHeight);
 
     this.particles = [];
