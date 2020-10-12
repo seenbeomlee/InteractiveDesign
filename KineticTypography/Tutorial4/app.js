@@ -31,6 +31,8 @@ class App {
     this.canvas.height = this.stageHeight * this.pixelRatio;
     this.ctx.scale(this.pixelRatio, this.pixelRatio);
 
+    this.ctx.globalCompositeOperation = 'lighter';
+
     this.visual.show(this.stageWidth, this.stageHeight);
   }
 
