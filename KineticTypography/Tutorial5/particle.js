@@ -1,3 +1,4 @@
+/* create stroke amount */
 const TOTAL = 12;
 
 export class Particle {

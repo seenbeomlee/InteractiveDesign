@@ -1,5 +1,6 @@
 import { Particle } from './particle.js';
 
+/* create stroke speed */
 const TOTAL = 10;
 
 export class Visual {
