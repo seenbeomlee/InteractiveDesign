@@ -1,5 +1,6 @@
 import { Text } from './text.js';
 import { Particle } from './particle.js';
+import { hslToHex } from './utils.js';
 
 export class Visual {
   constructor() {
@@ -51,7 +52,10 @@ export class Visual {
   }
 
   getColor() {
-    return '#ff0000';
+    const minHue = 80;
+    const maxHue = 340;
+    const hue = (maxHue - minHue) * Math.random() + minHue;
+    return hslToHex(hue, 84, 50);
   }
 
   onMove(e) {
