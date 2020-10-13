@@ -1,3 +1,5 @@
+import { Visual } from './visual.js';
+
 class App {
   constructor() {
     this.setWebgl();
@@ -7,6 +9,8 @@ class App {
         families: ['Hind:700'],
       },
       fontactive: () => {
+        this.visual = new Visual();
+
         window.addEventListener('resize', this.resize.bind(this), false);
         this.resize();
 
@@ -36,6 +40,8 @@ class App {
     this.stageHeight = document.body.clientHeight;
 
     this.renderer.resize(this.stageWidth, this.stageHeight);
+
+    this.visual.show(this.stageWidth, this.stageHeight, this.stage);
   }
 
   animate(t) {

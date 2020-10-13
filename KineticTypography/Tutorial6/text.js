@@ -25,7 +25,7 @@ export class Text {
     const fontPos = this.ctx.measureText(myText);
     this.ctx.fillText(
       myText,
-      (stageWidth = fontPos.width) / 2,
+      (stageWidth - fontPos.width) / 2,
       fontPos.actualBoundingBoxAscent +
         fontPos.actualBoundingBoxDescent +
         (stageHeight - fontSize) / 2
