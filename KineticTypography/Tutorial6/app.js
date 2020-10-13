@@ -47,6 +47,8 @@ class App {
   animate(t) {
     requestAnimationFrame(this.animate.bind(this));
 
+    this.visual.animate();
+
     this.renderer.render(this.stage);
   }
 }
