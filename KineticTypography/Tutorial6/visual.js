@@ -1,7 +1,7 @@
 import { Text } from './text.js';
 import { ParticleGroup } from './particleGroup.js';
 
-const LINE_TOTAL = 10;
+const LINE_TOTAL = 2;
 
 export class Visual {
   constructor() {
@@ -25,7 +25,7 @@ export class Visual {
       stage.removeChild(this.container);
     }
 
-    this.pos = this.text.setText('R', 10, stageWidth, stageHeight);
+    this.pos = this.text.setText('A', 10, stageWidth, stageHeight);
 
     this.container = new PIXI.ParticleContainer(this.pos.length * LINE_TOTAL, {
       verticles: false,
