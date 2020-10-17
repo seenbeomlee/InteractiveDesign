@@ -16,13 +16,13 @@ class App {
     this.ctx = this.canvas.getContext('2d');
     document.body.appendChild(this.canvas);
 
+    this.sun = new Sun();
+
     this.hills = [
       new Hill('#FE5FE6', 0.2, 12),
       new Hill('#FF4FBB', 0.5, 8),
       new Hill('#ff4674', 1.4, 6),
     ];
-
-    this.sun = new Sun();
 
     this.sheepController = new SheepController();
 
@@ -55,7 +55,7 @@ class App {
     this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
 
     this.sun.draw(this.ctx, t);
-    
+
     let dots;
     for (let i = 0; i < this.hills.length; i++) {
       dots = this.hills[i].draw(this.ctx);

@@ -7,7 +7,7 @@ export class Sun {
     this.stageWidth = stageWidth;
     this.stageHeight = stageHeight;
 
-    this.x = this.stageWidth - this.radise - 140;
+    this.x = this.stageWidth - this.radius - 140;
     this.y = this.radius + 100;
   }
 
