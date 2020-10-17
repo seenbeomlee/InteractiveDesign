@@ -22,6 +22,11 @@ export class Sheep {
   }
 
   draw(ctx, t, dots) {
+    this.curFrame += 1;
+    if (this.curFrame == this.totalFrame) {
+      this.curFrame = 0;
+    }
+
     this.animate(ctx, dots);
   }
 
