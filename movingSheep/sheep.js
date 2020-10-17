@@ -32,12 +32,17 @@ export class Sheep {
     ctx.save();
     ctx.translate(this.x, this.y);
     ctx.fillStyle = '#000000';
-    ctx.fillRect(
+    ctx.drawImage(
+      this.img,
+      this.imgWidth * this.curFrame,
+      0,
+      this.imgWidth,
+      this.imgHeight,
       -this.sheepWidthHalf,
       -this.sheepHeight + 20,
       this.sheepWidth,
       this.sheepHeight,
-    );
+    )
     ctx.restore();
   }
 
