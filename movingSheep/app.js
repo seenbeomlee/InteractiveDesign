@@ -6,6 +6,10 @@ import {
   SheepController
 } from './sheep-controller.js'
 
+import {
+  Sun
+} from './sun.js'
+
 class App {
   constructor() {
     this.canvas = document.createElement('canvas');
@@ -17,6 +21,8 @@ class App {
       new Hill('#FF4FBB', 0.5, 8),
       new Hill('#ff4674', 1.4, 6),
     ];
+
+    this.sun = new Sun();
 
     this.sheepController = new SheepController();
 
@@ -34,6 +40,8 @@ class App {
     this.canvas.height = this.stageHeight * 2;
     this.ctx.scale(2, 2);
 
+    this.sun.resize(this.stageWidth, this.stageHeight);
+
     for (let i = 0; i < this.hills.length; i++) {
       this.hills[i].resize(this.stageWidth, this.stageHeight);
     }
@@ -46,6 +54,8 @@ class App {
 
     this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
 
+    this.sun.draw(this.ctx, t);
+    
     let dots;
     for (let i = 0; i < this.hills.length; i++) {
       dots = this.hills[i].draw(this.ctx);
