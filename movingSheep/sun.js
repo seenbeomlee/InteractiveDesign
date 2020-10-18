@@ -45,6 +45,7 @@ export class Sun {
     ctx.fill();
   }
 
+  /* set random number for fiery sun */
   updatePoints() {
     for (let i = 1; i < this.total; i++) {
       const pos = this.originPos[i];
