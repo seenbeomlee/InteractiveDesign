@@ -1,6 +1,6 @@
 import {Ripple} from './ripple.js';
 import {Dot} from './dot.js';
-import {collide} from './utils.js';
+import {collide, getBWValue} from './utils.js';
 
 class App {
   constructor() {
@@ -18,8 +18,8 @@ class App {
     window.addEventListener('resize', this.resize.bind(this), false);
     this.resize();
 
-    this.radius = 10;
-    this.pixelSize = 30;
+    this.radius = 16;
+    this.pixelSize = 16; /* pixel size */
     this.dots = [];
 
     this.isLoaded = false;
@@ -122,15 +122,19 @@ class App {
         const red = this.imgData.data[pixelIndex + 0];
         const green = this.imgData.data[pixelIndex + 1];
         const blue = this.imgData.data[pixelIndex + 2];
+        const scale = getBWValue(red, green, blue, false);
 
         const dot = new Dot(
           x, y,
           this.radius,
           this.pixelSize,
-          red, green, blue
+          red, green, blue,
+          scale
         );
 
-        this.dots.push(dot);
+        if(dot.targetRadius > 0.1) {
+          this.dots.push(dot);
+        }
       }
     }
   }
