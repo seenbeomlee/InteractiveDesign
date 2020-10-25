@@ -54,8 +54,8 @@ export class Wave {
       const cy = (prevY + this.points[i].y) / 2;
 
       /* just make straight first, not curved wave */ 
-      ctx.lineTo(cx, cy);
-      // ctx.quadraticCurveTo(prevX, prevY, cx, cy);
+      //ctx.lineTo(cx, cy);
+      ctx.quadraticCurveTo(prevX, prevY, cx, cy);
 
       prevX = this.points[i].x;
       prevY = this.points[i].y;

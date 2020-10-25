@@ -5,7 +5,7 @@ import {
 export class WaveGroup {
   constructor() {
     this.totalWaves = 3; // # of waves which are displayed in the monitor
-    this.totalPoints = 6; // # of points in a one wave
+    this.totalPoints = 15; // # of points in a one wave
 
     this.color = ['rgba(0,199,235,0.4)', 'rgba(0,146,199,0.4)', 'rgba(0,87,158,0.4)'];
 
