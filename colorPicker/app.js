@@ -83,13 +83,13 @@ class App {
       );
     }
 
-    this.ctx.drawImage(
+/*     this.ctx.drawImage(
       this.image,
       0, 0,
       this.image.width, this.image.height,
       this.imgPos.x, this.imgPos.y,
       this.imgPos.width, this.imgPos.height,
-    );
+    ); */
 
     this.tmpCtx.drawImage(
       this.image,
@@ -163,13 +163,13 @@ class App {
       this.dots[i].reset();
     }
 
-    this.ctx.drawImage(
+/*     this.ctx.drawImage(
       this.image,
       0, 0,
       this.image.width, this.image.height,
       this.imgPos.x, this.imgPos.y,
       this.imgPos.width, this.imgPos.height,
-    );
+    ); */
 
     this.ripple.start(e.offsetX, e.offsetY);
   }
