@@ -34,7 +34,7 @@ class App {
       this.stageWidth / 2,
       this.stageHeight / 2,
       this.stageHeight / 3,
-      3 /* 3, 6, 8 .. angles */
+      5 /* 3, 6, 8 .. angles */
     );
   }
 
