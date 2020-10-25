@@ -144,7 +144,7 @@ class App {
     
     this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight); /* more clear? */
 
-    this.ripple.animate(this.ctx);
+    this.ripple.animate();
 
     for (let i = 0; i < this.dots.length; i++) {
       const dot = this.dots[i];
