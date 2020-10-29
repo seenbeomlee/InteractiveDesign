@@ -32,6 +32,9 @@ export class Dialog {
   }
 
   animate(ctx) {
+    const move = this.target.clone().subtract(this.pos).reduce(FOLLOW_SPEED);
+    this.pos.add(move);
+
     ctx.beginPath();
     ctx.fillStyle = `#f4e55a`;
     ctx.fillRect(this.pos.x, this.pos.y, WIDTH, HEIGHT);
