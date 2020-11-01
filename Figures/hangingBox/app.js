@@ -56,6 +56,15 @@ class App {
     for (let i = 0; i < this.items.length; i++) {
       this.items[i].animate(this.ctx);
     }
+
+    if(this.curItem) {
+      this.ctx.fillStyle = `#ff4338`;
+      this.ctx.strokeStyle = `#ff4338`;
+
+      this.ctx.beginPath();
+      this.ctx.arc(this.curItem.centerPos.x, this.curItem.centerPos.y, 8, 0, Math.PI * 2);
+      this.ctx.fill();
+    }
   }
 
   onDown(e) {
