@@ -68,6 +68,11 @@ class App {
       this.ctx.beginPath();
       this.ctx.arc(this.curItem.centerPos.x, this.curItem.centerPos.y, 8, 0, Math.PI * 2);
       this.ctx.fill();
+
+      this.ctx.beginPath();
+      this.ctx.moveTo(this.mousePos.x, this.mousePos.y);
+      this.ctx.lineTo(this.curItem.centerPos.x, this.curItem.centerPos.y);
+      this.ctx.stroke();
     }
   }
 
