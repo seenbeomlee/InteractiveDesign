@@ -1,6 +1,6 @@
 import { lineCircle } from "./utils.js";
 
-const BOUNCE = 0.92;
+const BOUNCE = 0.92; // 줄의 흔들림 지속 정도: 0.92 is the best
 
 export class BounceString {
   constructor(pos, color) {
@@ -60,7 +60,7 @@ export class BounceString {
       moveY,
       this.detect,
     )) {
-      this.detect = 300;
+      this.detect = 200; // 줄의 흔들림 세기 정도
       let tx = (this.points[1].ox + moveX) / 2;
       let ty = moveY;
       this.points[1].vx = tx - this.points[1].x;
