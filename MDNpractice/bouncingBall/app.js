@@ -31,6 +31,8 @@ function draw() {
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
+  ball.vy *= .99;
+  ball.vy += .25;
   raf = window.requestAnimationFrame(draw);
 }
 
